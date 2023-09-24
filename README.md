@@ -10,7 +10,7 @@ This sample application is for a ficticious company that manages an inventory of
 
 ![](Diagram.png)
 
-[![CI/CD](https://github.com/dsanchezcr/CosmicWorksSampleApp/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/dsanchezcr/CosmicWorksSampleApp/actions/workflows/ci-cd.yml)
+[![CI/CD](https://github.com/dsanchezcr/CosmicWorksSampleApp/actions/workflows/ci-cd.yaml/badge.svg)](https://github.com/dsanchezcr/CosmicWorksSampleApp/actions/workflows/ci-cd.yaml)
 
 ## Features
 
@@ -26,3 +26,5 @@ This web applications demonstrates the following concepts:
 ## Prerequisite
 
 - To run this application you will need to have access to the Azure OpenAI Service, you can [apply here](https://aka.ms/oai/access).
+
+> Note: The GPT Model limits the responses to the content from the Azure CosmosDB. 
