@@ -1,0 +1,34 @@
+@page
+@model ProductsPageModel
+
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">SKU</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @foreach(Product item in Model.Products ?? Enumerable.Empty<Product>())
+        {
+            <tr>
+                <td>
+                    @item.name
+                </td>
+                <td>
+                    @item.sku
+                </td>
+                <td>
+                    <small>
+                        @item.description
+                    </small>
+                </td>
+                <td>
+                    @item.price
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

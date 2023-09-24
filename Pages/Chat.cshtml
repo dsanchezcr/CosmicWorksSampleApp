@@ -1,0 +1,22 @@
+﻿@page
+@model CosmicWorksSampleApp.Pages.ChatPageModel
+
+<h1>Chat</h1>
+
+<form method="post">
+    <div class="form-group">
+        <textarea name="Message" type="text" placeholder="Your questions here..." class="form-control" rows="3"/></textarea>
+        <button type="submit" class="form-control">Ask</button>
+    </div>
+    @Html.AntiForgeryToken()
+</form>
+
+<hr>
+
+@if (!string.IsNullOrEmpty(Model.ResponseText))
+{
+    <div>
+        <h3>Response:</h3>
+        <p>@Model.ResponseText</p>
+    </div>
+}

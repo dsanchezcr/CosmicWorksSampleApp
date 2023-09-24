@@ -1,0 +1,46 @@
+﻿@page
+@model CosmicWorksSampleApp.Pages.SearchPageModel
+
+<h1>Search</h1>
+
+<form method="post">
+    <div class="form-group">
+        <input name="Query" type="text" placeholder="Search products here..." class="form-control" />
+        <button class="form-control" type="submit">Search</button>
+    </div>
+    @Html.AntiForgeryToken()
+</form>
+
+<hr>
+
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">SKU</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @foreach (Product item in Model.Products ?? Enumerable.Empty<Product>())
+        {
+            <tr>
+                <td>
+                    @item.name
+                </td>
+                <td>
+                    @item.sku
+                </td>
+                <td>
+                    <small>
+                        @item.description
+                    </small>
+                </td>
+                <td>
+                    @item.price
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
