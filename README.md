@@ -2,6 +2,7 @@
 
 Sample ASP.NET web application that consumes an Azure Cosmos DB (NoSQL), it connects to Azure Cognitive Search and Azure OpenAI with our own data (preview).
 
+
 > Note: This project is an extension from the [azurecosmosdb/cosmicworks](https://github.com/azurecosmosdb/cosmicworks).
 
 ## Introduction
